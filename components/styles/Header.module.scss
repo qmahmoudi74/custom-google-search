@@ -1,0 +1,27 @@
+.header {
+  display: grid;
+  align-items: flex-end;
+
+  .searchBox {
+    display: grid;
+    position: relative;
+
+    .icon {
+      display: grid;
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      right: 1rem;
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 0.5rem 3rem 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      border: thin solid #aaa;
+      unicode-bidi: plaintext;
+    }
+  }
+}

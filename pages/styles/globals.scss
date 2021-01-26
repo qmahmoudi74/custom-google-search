@@ -1,0 +1,19 @@
+:root {
+  font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 2rem;
+  color: #666;
+}
+
+*:focus {
+  outline: none;
+}
