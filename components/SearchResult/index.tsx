@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { Context } from "./Context";
+import { Context } from "../Context";
 import ResultCard from "./ResultCard";
-import styles from "./styles/SearchResult.module.scss";
+import styles from "../styles/SearchResult.module.scss";
 
 interface Item {
   title: string;

@@ -1,4 +1,4 @@
-import styles from "./styles/ResultCard.module.scss";
+import styles from "../styles/ResultCard.module.scss";
 
 export default function ResultCard({ title, link, snippet }) {
   return (
