@@ -2,6 +2,13 @@
   display: grid;
   align-items: flex-end;
 
+  .title {
+    display: grid;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
   .searchBox {
     display: grid;
     position: relative;
@@ -17,11 +24,17 @@
     }
 
     input {
-      padding: 0.5rem 3rem 0.5rem 1rem;
+      padding: 0.75rem 3rem 0.75rem 1.25rem;
       border-radius: 999px;
       font-size: 1rem;
-      border: thin solid #aaa;
+      border: none;
+      box-shadow: 0 0 1rem rgba($color: #aad, $alpha: 0.1);
       unicode-bidi: plaintext;
+      transition: box-shadow 0.25s ease;
+
+      &:hover {
+        box-shadow: 0 0.25rem 1rem rgba($color: #aad, $alpha: 0.1);
+      }
     }
   }
 }

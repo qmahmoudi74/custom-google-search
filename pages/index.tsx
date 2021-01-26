@@ -11,8 +11,18 @@ export default function Home() {
   const [searchWord, setSearchWord] = useState("");
   const [searchResult, setSearchResult] = useState();
 
+  const [timer, setTimer] = useState(null);
+
   useEffect(() => {
-    search(searchWord);
+    clearTimeout(timer);
+    setTimer(
+      setTimeout(
+        () =>
+          searchWord &&
+          search(searchWord).then(({ data }) => setSearchResult(data)),
+        1000
+      )
+    );
   }, [searchWord]);
 
   return (

@@ -1,0 +1,22 @@
+.resultCard {
+  display: grid;
+  gap: 0.25rem;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.1);
+  border-radius: 0.5rem;
+  max-width: 64rem;
+
+  .title {
+    display: grid;
+    font-size: large;
+  }
+
+  a {
+    display: grid;
+  }
+
+  .snippet {
+    font-size: small;
+  }
+}

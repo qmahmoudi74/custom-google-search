@@ -1,9 +1,22 @@
 import { useContext } from "react";
 import { Context } from "./Context";
+import ResultCard from "./ResultCard";
 import styles from "./styles/SearchResult.module.scss";
 
-export default function SearchResult() {
-  const { searchWord } = useContext(Context);
+interface Item {
+  title: string;
+  link: string;
+  snippet: string;
+}
 
-  return <main className={styles.main}>{searchWord}</main>;
+export default function SearchResult() {
+  const { searchResult } = useContext(Context);
+
+  return (
+    <main className={styles.main}>
+      {searchResult?.items?.map((item: Item) => (
+        <ResultCard {...item} key={item.link} />
+      ))}
+    </main>
+  );
 }
