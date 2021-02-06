@@ -39,5 +39,5 @@ export default function Home({host}) {
 }
 
 const getServerSideProps = async ({req}) => {
-  return {props: {host: req.heders.hostname}}
+  return {props: {host: req.headers.host}}
 }
