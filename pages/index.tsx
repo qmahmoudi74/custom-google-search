@@ -5,7 +5,7 @@ import SearchResult from "components/SearchResult";
 import { Context } from "components/Context";
 import { search } from "helper/search";
 
-export default function Home() {
+export default function Home({host}) {
   const { Provider } = Context;
 
   const [searchWord, setSearchWord] = useState("");
@@ -30,9 +30,14 @@ export default function Home() {
       value={{ searchWord, setSearchWord, searchResult, setSearchResult }}
     >
       <div className={styles.container}>
+        <div>{host}</div>
         <Header />
         <SearchResult />
       </div>
     </Provider>
   );
+}
+
+const getServerSideProps = async ({req}) => {
+  return {props: {host: req.heders.hostname}}
 }
