@@ -38,6 +38,6 @@ export default function Home({host}) {
   );
 }
 
-const getServerSideProps = async ({req}) => {
-  return {props: {host: JSON.stringify(req.headers)}}
+export const getServerSideProps = async ({req}) => {
+  return {props: {host: req.headers.host}
 }
